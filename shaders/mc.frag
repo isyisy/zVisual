@@ -22,7 +22,7 @@ void main()
 	
 	vec3 viewDir = normalize(-eyeSpacePosition);
 	vec3 reflectDir = reflect(-lightDir,-eyeSpaceNormal);
-	
+
 	float spec = pow(max(dot(viewDir,reflectDir),0),32);
 	
 	FragColor = (diffuse+spec)*diffuseColor;

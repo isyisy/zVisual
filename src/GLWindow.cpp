@@ -83,6 +83,7 @@ void GLWindow::startup()
 
     //load data
 	DataLoader::instance()->createCubeData();
+
 	if(!DataLoader::instance()->isEnable())
         return;
 

@@ -12,6 +12,7 @@ uniform float maxgray;
 uniform sampler3D texMap;
 
 const int MAX_SAMPLE_NUMBERS = 300;
+
 float stepSize = 1.732/float(MAX_SAMPLE_NUMBERS);
 
 //transfer fuction knots

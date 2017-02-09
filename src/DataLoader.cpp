@@ -26,7 +26,8 @@ DataLoader* DataLoader::instance()
 void DataLoader::createCubeData()
 {
     short* buffer = new short[200 * 200 * 200]();
-    for (int z = 0; z < 200; z++)
+
+	for (int z = 0; z < 200; z++)
 	{
 		for (int y = 0; y < 200; y++)
 		{
@@ -43,7 +44,6 @@ void DataLoader::createCubeData()
 			}
 		}
 	}
-
 	mDimenRange[0] = 200;
 	mDimenRange[1] = 200;
 	mDimenRange[2] = 200;

@@ -63,6 +63,7 @@ void MarchingCubesActor::initShader()
 	glUniform1i(mShader("triTable"), 1);
 	glUniform1i(mShader("edvTable"), 2);
 	glUniform3fv(mShader("lightPos"), 1, glm::value_ptr(glm::vec3(0, 0.5, 4)));
+
 	mShader.UnUse();
 
 	//cube vertex
@@ -104,6 +105,7 @@ void MarchingCubesActor::render()
     glCullFace(GL_FRONT);
 
 	glBindVertexArray(vaoID);
+
 	mShader.Use();
 	glUniformMatrix4fv(mShader("MVP"), 1, GL_FALSE, glm::value_ptr(mCamera->GetMVP()));
 	glUniformMatrix4fv(mShader("MV"), 1, GL_FALSE, glm::value_ptr(mCamera->GetMV()));
